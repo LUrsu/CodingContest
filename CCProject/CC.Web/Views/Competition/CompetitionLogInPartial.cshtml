@@ -1,0 +1,14 @@
+﻿@model CC.Web.Models.Competition.CompetitionRegistrationViewModel
+
+<div>
+    @using(Html.BeginForm("RegisterTeam", "Competition", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.Id, Model.Id)
+        @Html.HiddenFor(m => m.CompetitionName, Model.CompetitionName)
+        <label>Team to Join</label>
+        @Html.DropDownListFor(m => m.TeamId, new SelectList(Model.PersonsTeams, "Id", "Name"))<br/>
+        <label>Password</label><br/>
+        @Html.EditorFor(m => m.PassWord)<br/>
+        <input type="submit" value="Register"/>
+    }
+</div>

@@ -1,0 +1,10 @@
+﻿@model CC.Web.Models.Team.ListedTeamsViewModel
+           
+<div>
+    <ul>
+        @foreach(var team in Model.ListedTeamViews)
+        {
+            <li>@Html.ActionLink(team.Name, "Details", new {controller = "Team", id = team.Id})</li>
+        }
+    </ul>
+</div>

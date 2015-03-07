@@ -1,0 +1,10 @@
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\CC.Service.dll.config
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\CC.Service.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\CC.Service.pdb
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\CC.Domain.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\EntityFramework.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\CC.Domain.pdb
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\bin\Debug\EntityFramework.xml
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\obj\Debug\CC.Service.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Service\obj\Debug\CC.Service.pdb

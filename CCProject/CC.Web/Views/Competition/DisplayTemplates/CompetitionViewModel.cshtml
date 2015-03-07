@@ -1,0 +1,18 @@
+﻿@using CC.Web.Binders
+@model CC.Web.Models.Competition.CompetitionViewModel
+
+<div>
+    <table>
+        <tr>
+            <td>@Model.Name</td>
+            @if(!Model.InCompetition)
+            {
+                <td>@Html.Action("LogInPartial", new {id = Model.Id})</td>
+            }
+        </tr>
+        <tr>
+            <td>Start Time: @Html.DisplayFor(m=> m.Setting.StartTime)</td>
+            <td>End Time: @Html.DisplayFor(m=> m.Setting.EndTime)</td>
+        </tr>
+    </table>
+</div>

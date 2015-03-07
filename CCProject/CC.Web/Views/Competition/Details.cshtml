@@ -1,0 +1,48 @@
+﻿@model CC.Web.Models.Competition.CompetitionViewModel
+<div>
+    <h2>@Model.Competition.Name
+        @if (Membership.GetUser().UserName.Equals(Model.Admin.UserName))
+        {
+            @Html.ActionLink("Edit Competition", "Edit", new { id = Model.Competition.Id }, FormMethod.Get)
+        }
+    </h2>
+    Admin: @Html.ActionLink(Model.Admin.FirstName, "Details", "Person", new { id = Model.Admin.Id }, null)<br />
+    @Model.Competition.Setting.StartTime - @Model.Competition.Setting.EndTime
+</div>
+<div>
+    <h3>
+        Registered Teams:</h3>
+    @Html.Action("RegisteredTeams", new { id = Model.Competition.Id })
+    @if (!Model.IsPersonRegistered)
+    {
+        @Html.ActionLink("Register New Team", "CreateForm", "Team", new { competitionId = Model.Competition.Id }, null)
+    }
+</div>
+@if (Model.IsOngoing)
+{
+    <div>
+        <h3>
+            Score Board:
+        </h3>
+        @Html.ActionLink("View Score Board", "ScoreBoard", new {controller = "Competition", id = Model.Competition.Id})
+    </div>
+    <div>
+        <h3>
+            Problems:
+        </h3>
+        <ul>
+            @foreach (var problem in Model.Problems.ProblemViewModels)
+            {
+                if(Model.IsPersonRegistered)
+                 {
+                     <li>@Html.ActionLink(problem.ShortName, "Details", "Problem", new { id = problem.Id }, null)</li>
+                 }
+                else
+                 {
+                     <li>@problem.ShortName</li>
+                 }
+                
+            }
+        </ul>
+    </div>
+}

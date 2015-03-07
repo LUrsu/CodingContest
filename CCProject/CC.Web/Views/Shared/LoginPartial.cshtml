@@ -1,0 +1,13 @@
+﻿@model CC.Web.Models.LogOnViewModel 
+<div>
+    @using (Html.BeginForm("LogOn", "Account", FormMethod.Post))
+    {
+        if (ViewContext.HttpContext.Request != null)
+        {
+            @Html.Hidden("returnUrl", ViewContext.HttpContext.Request["returnUrl"])
+        }
+        @Html.EditorFor(m => m.UserName)<br />
+        @Html.PasswordFor(m => m.Password)<br />
+        <input type="submit" value="Log In" />
+    }
+</div>

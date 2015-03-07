@@ -1,0 +1,55 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="9D7764DE-2156-4802-8BA9-E862CFD6B5C3/d:DataHolders/f:ScoreBoardCell.cs" caret="273" fromTop="13" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:TeamController.cs" caret="2392" fromTop="19" />
+    <File id="9D7764DE-2156-4802-8BA9-E862CFD6B5C3/f:TeamService.cs" caret="2169" fromTop="46" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.edmx.sql" caret="658" fromTop="16" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Problem/f:Details.cshtml" caret="306" fromTop="6" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:CompetitionController.cs" caret="3457" fromTop="23" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Solution/f:Details.cshtml" caret="101" fromTop="5" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:SolutionController.cs" caret="1203" fromTop="22" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/d:Dummy/f:AddFakeStudentController.cs" caret="160" fromTop="6" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Models/d:Solution/f:SolutionViewModel.cs" caret="1112" fromTop="19" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.Designer.cs" caret="411" fromTop="3" />
+    <File id="9D7764DE-2156-4802-8BA9-E862CFD6B5C3/f:CompetitionService.cs" caret="4536" fromTop="18" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:CodeCompilers/f:CodeCompiler.cs" caret="155" fromTop="6" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Models/d:Competition/f:CompetitionViewModel.cs" caret="63" fromTop="1" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Models/d:Competition/f:CompetitionEditViewModel.cs" caret="248" fromTop="8" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:ScoreBoardPartial.cshtml" caret="963" fromTop="25" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Details.cshtml" caret="167" fromTop="3" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Edit.cshtml" caret="1009" fromTop="18" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Solution/f:DisplayAllSolutionsPartial.cshtml" caret="1477" fromTop="53" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:ScoreBoard.cshtml" caret="0" fromTop="0" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:SolutionController.cs" caret="30748" fromTop="19" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.edmx.sql" caret="10602" fromTop="21" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.edmx.sql" caret="10602" fromTop="19" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.edmx.sql" caret="10602" fromTop="21" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.edmx.sql" caret="10602" fromTop="16" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.edmx.sql" caret="10602" fromTop="11" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Details.cshtml" caret="1538" fromTop="23" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Details.cshtml" caret="1538" fromTop="14" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:CompetitionController.cs" caret="6456" fromTop="3" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Models/d:Competition/f:CompetitionViewModel.cs" caret="33" fromTop="0" />
+    <File id="0D7941DC-6629-4C66-B03A-CA87923EADCD/d:Entities/f:ContestDataModel.Designer.cs" caret="0" fromTop="0" />
+    <File id="9D7764DE-2156-4802-8BA9-E862CFD6B5C3/f:CompetitionService.cs" caret="4724" fromTop="21" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Problem/f:Details.cshtml" caret="29227" fromTop="18" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:SolutionController.cs" caret="3801" fromTop="19" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Models/d:Solution/f:SolutionViewModel.cs" caret="1107" fromTop="19" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:SolutionController.cs" caret="5661" fromTop="19" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Solution/f:DisplayAllSolutionsPartial.cshtml" caret="914" fromTop="17" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Solution/f:DisplayAllSolutionsPartial.cshtml" caret="1461" fromTop="29" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:ScoreBoardPartial.cshtml" caret="958" fromTop="25" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Details.cshtml" caret="1538" fromTop="25" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Details.cshtml" caret="1538" fromTop="28" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Details.cshtml" caret="1538" fromTop="24" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:Edit.cshtml" caret="787" fromTop="13" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:SolutionController.cs" caret="1071" fromTop="19" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Controllers/f:SolutionController.cs" caret="1181" fromTop="21" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Solution/f:Details.cshtml" caret="153" fromTop="5" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Solution/f:Details.cshtml" caret="101" fromTop="5" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Views/d:Competition/f:ScoreBoardPartial.cshtml" caret="832" fromTop="21" />
+    <File id="CCD3D11F-1F0F-4735-854B-32CC8E8F2609/d:Models/d:Competition/f:CompetitionEditViewModel.cs" caret="163" fromTop="4" />
+  </RecentEdits>
+</RecentFiles>

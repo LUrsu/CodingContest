@@ -1,0 +1,27 @@
+﻿@model CC.Web.Models.Problem.ProblemViewModel
+
+<div>
+        @Html.ActionLink("Delete", "DeleteProblem", "Competition", new { problemID = Model.Id, competitionID = Model.CompetitionId }, FormMethod.Post)
+    @using (Html.BeginForm("Edit", "Problem", FormMethod.Post))
+    {
+        <fieldset>
+            @Html.Hidden("Id",Model.Id)
+            @Html.Hidden("CompetitionId", Model.CompetitionId)
+            <label>Name</label><br/>
+            @Html.TextBoxFor(m => m.Name)<br/>
+            <label>ShortName</label><br/>
+            @Html.TextBoxFor(m => m.ShortName)<br/>
+            <label>Description</label><br/>
+            @Html.EditorFor(m => m.Description)<br/>
+            <label>Example input</label><br/>
+            @Html.EditorFor(m => m.ExampleInput)<br/>
+            <label>Example output</label><br/>
+            @Html.EditorFor(m => m.ExampleOutput)<br/>
+            <label>Actual Input</label><br/>
+            @Html.EditorFor(m => m.ActualInput)<br/>
+            <label>Expected output</label><br/>
+            @Html.EditorFor(m => m.ExpectedOutput)<br/>
+            <input type="submit" value="Edit Problem" />
+        </fieldset>
+    }
+</div>

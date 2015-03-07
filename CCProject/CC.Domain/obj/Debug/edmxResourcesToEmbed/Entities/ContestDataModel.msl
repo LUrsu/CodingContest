@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContestModelStoreContainer" CdmEntityContainer="ContestEntities">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.Team)">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamInCompetitions">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.TeamInCompetition)">
+        <MappingFragment StoreEntitySet="TeamInCompetitions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="CompetitionId" ColumnName="CompetitionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Competitions">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.Competition)">
+        <MappingFragment StoreEntitySet="Competitions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="EntryPassword" ColumnName="EntryPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.Setting)">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="PentaltyAmount" ColumnName="PentaltyAmount" />
+          <ScalarProperty Name="SubmissionTimeLimit" ColumnName="SubmissionTimeLimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Problems">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.Problem)">
+        <MappingFragment StoreEntitySet="Problems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExampleInput" ColumnName="ExampleInput" />
+          <ScalarProperty Name="ExampleOutput" ColumnName="ExampleOutput" />
+          <ScalarProperty Name="ExpectedOutput" ColumnName="ExpectedOutput" />
+          <ScalarProperty Name="CompetitionId" ColumnName="CompetitionId" />
+          <ScalarProperty Name="ActualInput" ColumnName="ActualInput" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solutions">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.Solution)">
+        <MappingFragment StoreEntitySet="Solutions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubmissionTime" ColumnName="SubmissionTime" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="JudgeTime" ColumnName="JudgeTime" />
+          <ScalarProperty Name="ResultDescription" ColumnName="ResultDescription" />
+          <ScalarProperty Name="ProblemId" ColumnName="ProblemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="IsTypeOf(ContestModel.File)">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PersonTeam" TypeName="ContestModel.PersonTeam" StoreEntitySet="PersonTeam">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="People_Id" />
+      </EndProperty>
+      <EndProperty Name="Team">
+        <ScalarProperty Name="Id" ColumnName="Teams_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SolutionFile" TypeName="ContestModel.SolutionFile" StoreEntitySet="Files">
+      <EndProperty Name="Solution">
+        <ScalarProperty Name="Id" ColumnName="SolutionFile_File_Id" />
+      </EndProperty>
+      <EndProperty Name="File">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CompetitionSetting" TypeName="ContestModel.CompetitionSetting" StoreEntitySet="Competitions">
+      <EndProperty Name="Setting">
+        <ScalarProperty Name="Id" ColumnName="Setting_Id" />
+      </EndProperty>
+      <EndProperty Name="Competition">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

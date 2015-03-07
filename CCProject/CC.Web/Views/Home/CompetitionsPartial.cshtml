@@ -1,0 +1,12 @@
+﻿@model CC.Web.Models.Competition.CompetitionsViewModel
+<div>
+    <input type="hidden" name="?resultsPerPage" value="10" />
+    <ul>
+        @foreach (var competition in Model.CompetitionViewModels)
+        {
+            <li>   
+                @Html.ActionLink(competition.Name, "Details", new {controller = "Competition", id = competition.Id })
+            </li>
+        }
+    </ul>
+</div>

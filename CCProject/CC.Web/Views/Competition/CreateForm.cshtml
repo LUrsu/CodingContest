@@ -1,0 +1,13 @@
+﻿@model CC.Web.Models.Competition.CompetitionFormViewModel
+<div>
+    @using (Html.BeginForm("Create", "Competition", FormMethod.Post))
+    {
+        <fieldset>
+            <label>Name</label><br />
+            @Html.EditorFor(m => m.Name)<br />
+            @Html.HiddenFor(m => m.AdminId, Model.AdminId)
+            @Html.HiddenFor(m => m.SettingId, Model.SettingId)
+            <input type="submit" value="Save" />
+        </fieldset>
+    }
+</div>

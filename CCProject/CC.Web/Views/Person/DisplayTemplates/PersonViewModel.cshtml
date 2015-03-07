@@ -1,0 +1,42 @@
+﻿@model CC.Web.Models.Person.PersonViewModel
+<!--TODO finish up how this should all work -->
+<table>
+    <tr>
+        <td>@Model.FullName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Registered In Teams:
+        </td>
+        <td>
+            Registered For Competitions:
+        </td>
+    </tr>
+    <tr>
+        @if (Model.HasTeams)
+        {
+            
+            <td>@Html.Action("PersonsTeams", new { id = Model.Id })
+            </td>
+        }
+        else
+        {
+            <td>
+                This user isn't registered in any teams.
+            </td>
+        }
+        @if (Model.InCompetitions)
+        {
+            <td>@Html.Action("PersonsTeamsInCompetitions", new { id = Model.Id })
+            </td>
+            
+        }
+        else
+        {
+            <td>
+                This user isn't registered for any Competitions
+            </td>
+        }
+    </tr>
+</table>

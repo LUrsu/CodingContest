@@ -1,0 +1,34 @@
+﻿@model CC.Service.DataHolders.ScoreBoardData 
+
+<div>
+    <table>
+        <tr>
+            <th>Team Name</th>
+            @foreach(var problem in Model.Problems)
+            {
+                <th>@Html.ActionLink(problem.ShortName, "Details", new {controller = "Problem", id = problem.Id})</th>
+            }
+            <th>Total</th>
+        </tr>
+        @foreach(var teamScores in Model.TeamsScores)
+        {
+            <tr>
+                <td>@Html.ActionLink(teamScores.TeamName, "Details", new {controller = "Team", id = teamScores.TeamId})</td>
+                @foreach(var cellData in teamScores.ProblemScoreData)
+                {
+                    
+                        if(cellData.Score > 0 && cellData.SolutionId > 0)
+                        {
+                            <td>@cellData.Score</td>
+                        }
+                        else
+                        {
+                            <td>N/A</td>
+                        }
+
+                }
+                <td>@teamScores.TotalScore</td>
+            </tr>
+        }
+    </table>
+</div>

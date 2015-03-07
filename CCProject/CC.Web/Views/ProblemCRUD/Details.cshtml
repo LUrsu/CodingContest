@@ -1,0 +1,50 @@
+﻿@model CC.Domain.Entities.Problem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Problem</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Discription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Discription)
+    </div>
+
+    <div class="display-label">ShortName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ShortName)
+    </div>
+
+    <div class="display-label">ExampleInput</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExampleInput)
+    </div>
+
+    <div class="display-label">ExampleOutput</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExampleOutput)
+    </div>
+
+    <div class="display-label">ExpectedOutput</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpectedOutput)
+    </div>
+
+    <div class="display-label">Competition</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Competition.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

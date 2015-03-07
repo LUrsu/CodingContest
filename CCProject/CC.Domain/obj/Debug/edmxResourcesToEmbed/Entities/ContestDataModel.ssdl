@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ContestModelStoreContainer">
+    <EntitySet Name="People" EntityType="ContestModel.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teams" EntityType="ContestModel.Store.Teams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeamInCompetitions" EntityType="ContestModel.Store.TeamInCompetitions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Competitions" EntityType="ContestModel.Store.Competitions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Settings" EntityType="ContestModel.Store.Settings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Problems" EntityType="ContestModel.Store.Problems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Solutions" EntityType="ContestModel.Store.Solutions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Files" EntityType="ContestModel.Store.Files" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonTeam" EntityType="ContestModel.Store.PersonTeam" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_PersonTeam_Person" Association="ContestModel.Store.FK_PersonTeam_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PersonTeam" EntitySet="PersonTeam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonTeam_Team" Association="ContestModel.Store.FK_PersonTeam_Team">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="PersonTeam" EntitySet="PersonTeam" />
+    </AssociationSet>
+    <AssociationSet Name="CompetitionProblem" Association="ContestModel.Store.CompetitionProblem">
+      <End Role="Competition" EntitySet="Competitions" />
+      <End Role="Problem" EntitySet="Problems" />
+    </AssociationSet>
+    <AssociationSet Name="TeamTeamInCompetition" Association="ContestModel.Store.TeamTeamInCompetition">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="TeamInCompetition" EntitySet="TeamInCompetitions" />
+    </AssociationSet>
+    <AssociationSet Name="CompetitionTeamInCompetition" Association="ContestModel.Store.CompetitionTeamInCompetition">
+      <End Role="Competition" EntitySet="Competitions" />
+      <End Role="TeamInCompetition" EntitySet="TeamInCompetitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolutionTeam" Association="ContestModel.Store.FK_SolutionTeam">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="Solution" EntitySet="Solutions" />
+    </AssociationSet>
+    <AssociationSet Name="SolutionFile" Association="ContestModel.Store.SolutionFile">
+      <End Role="Solution" EntitySet="Solutions" />
+      <End Role="File" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="CompetitionSetting" Association="ContestModel.Store.CompetitionSetting">
+      <End Role="Competition" EntitySet="Competitions" />
+      <End Role="Setting" EntitySet="Settings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Role" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TeamInCompetitions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeamId" Type="int" Nullable="false" />
+    <Property Name="CompetitionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Competitions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdminId" Type="int" Nullable="false" />
+    <Property Name="EntryPassword" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Setting_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="PentaltyAmount" Type="int" Nullable="false" />
+    <Property Name="SubmissionTimeLimit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Problems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShortName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExampleInput" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExampleOutput" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExpectedOutput" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CompetitionId" Type="int" Nullable="false" />
+    <Property Name="ActualInput" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solutions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionTime" Type="datetime" Nullable="false" />
+    <Property Name="Result" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="true" />
+    <Property Name="TeamId" Type="int" Nullable="false" />
+    <Property Name="JudgeTime" Type="datetime" Nullable="false" />
+    <Property Name="ResultDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProblemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SolutionFile_File_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonTeam">
+    <Key>
+      <PropertyRef Name="People_Id" />
+      <PropertyRef Name="Teams_Id" />
+    </Key>
+    <Property Name="People_Id" Type="int" Nullable="false" />
+    <Property Name="Teams_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CompetitionProblem">
+    <End Role="Competition" Type="ContestModel.Store.Competitions" Multiplicity="1" />
+    <End Role="Problem" Type="ContestModel.Store.Problems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competition">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Problem">
+        <PropertyRef Name="CompetitionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TeamTeamInCompetition">
+    <End Role="Team" Type="ContestModel.Store.Teams" Multiplicity="1" />
+    <End Role="TeamInCompetition" Type="ContestModel.Store.TeamInCompetitions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeamInCompetition">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CompetitionTeamInCompetition">
+    <End Role="Competition" Type="ContestModel.Store.Competitions" Multiplicity="1" />
+    <End Role="TeamInCompetition" Type="ContestModel.Store.TeamInCompetitions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competition">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeamInCompetition">
+        <PropertyRef Name="CompetitionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolutionTeam">
+    <End Role="Team" Type="ContestModel.Store.Teams" Multiplicity="1" />
+    <End Role="Solution" Type="ContestModel.Store.Solutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Solution">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SolutionFile">
+    <End Role="Solution" Type="ContestModel.Store.Solutions" Multiplicity="1" />
+    <End Role="File" Type="ContestModel.Store.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solution">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="File">
+        <PropertyRef Name="SolutionFile_File_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CompetitionSetting">
+    <End Role="Competition" Type="ContestModel.Store.Competitions" Multiplicity="*" />
+    <End Role="Setting" Type="ContestModel.Store.Settings" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Setting">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Competition">
+        <PropertyRef Name="Setting_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonTeam_Person">
+    <End Role="Person" Type="ContestModel.Store.People" Multiplicity="1" />
+    <End Role="PersonTeam" Type="ContestModel.Store.PersonTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonTeam">
+        <PropertyRef Name="People_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonTeam_Team">
+    <End Role="PersonTeam" Type="ContestModel.Store.PersonTeam" Multiplicity="*" />
+    <End Role="Team" Type="ContestModel.Store.Teams" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonTeam">
+        <PropertyRef Name="Teams_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<CC.Domain.Entities.Solution>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            FileName
+        </th>
+        <th>
+            SubmissionTime
+        </th>
+        <th>
+            JudgeTime
+        </th>
+        <th>
+            Result
+        </th>
+        <th>
+            ResultDescription
+        </th>
+        <th>
+            SourceCode
+        </th>
+        <th>
+            GeneratedInput
+        </th>
+        <th>
+            TeamInCompetitionId
+        </th>
+        <th>
+            Problem
+        </th>
+        <th>
+            Team
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubmissionTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JudgeTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Result)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResultDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SourceCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeneratedInput)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeamInCompetitionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Problem.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

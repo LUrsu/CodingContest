@@ -1,0 +1,8 @@
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\bin\Debug\CC.Domain.dll.config
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\bin\Debug\CC.Domain.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\bin\Debug\CC.Domain.pdb
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\bin\Debug\EntityFramework.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\bin\Debug\EntityFramework.xml
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\obj\Debug\CC.Domain.dll
+C:\Users\lursu\Documents\quarter 7\.Net 2 projects\coding contest site\trunk\CCProject\CC.Domain\obj\Debug\CC.Domain.pdb

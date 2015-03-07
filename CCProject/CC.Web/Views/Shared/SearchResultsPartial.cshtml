@@ -1,0 +1,28 @@
+﻿@model CC.Web.Models.Search.SearchResultsViewModel 
+
+
+<div>
+    <ol>
+        <li>Team Results</li>
+        @foreach(var team in Model.ListedTeamsViewModel.ListedTeamViews)
+        {
+            <li>
+                @Html.ActionLink(team.Name,"Details" , new {Controller="Team", id = team.Id})
+            </li>
+        }
+        <li>Person Results</li>
+        @foreach(var person in Model.PeopleViewModel.PersonViewModels)
+        {
+            <li>
+                @Html.ActionLink(person.FullName, "Details", new {controller = "Person", id = person.Id})
+            </li>
+        }
+        <li>Competition Result</li>
+        @foreach(var competition in Model.CompetitionsViewModel.CompetitionViewModels)
+        {
+            <li>
+                @Html.ActionLink(competition.Name, "Details", new {controller = "Competition", id = competition.Id})
+            </li>
+        }
+    </ol>
+</div>

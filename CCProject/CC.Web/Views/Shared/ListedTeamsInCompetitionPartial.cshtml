@@ -1,0 +1,12 @@
+﻿@model List<int>
+           
+<div>
+    <ol>
+        @foreach(var listedId in Model)
+        {
+            <li>
+                @Html.Action("ListedPartial", new { controller = "TeamInCompetition", id = listedId })
+            </li>
+        }
+    </ol>
+</div>

@@ -1,0 +1,12 @@
+﻿@model CC.Web.Models.AddFakeStudentViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Add a fake student credential</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+        <input type="submit" value="Add Student" />
+}

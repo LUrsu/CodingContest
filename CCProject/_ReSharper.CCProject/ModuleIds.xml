@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="CCD3D11F-1F0F-4735-854B-32CC8E8F2609" ModuleId="CC.Web" />
+  <Module PersistentId="9D7764DE-2156-4802-8BA9-E862CFD6B5C3" ModuleId="CC.Service" />
+  <Module PersistentId="0D7941DC-6629-4C66-B03A-CA87923EADCD" ModuleId="CC.Domain" />
+</Modules>

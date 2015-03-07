@@ -1,0 +1,35 @@
+﻿@model CC.Domain.Entities.Setting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Setting</legend>
+
+    <div class="display-label">StartTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartTime)
+    </div>
+
+    <div class="display-label">EndTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndTime)
+    </div>
+
+    <div class="display-label">PenaltyAmount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PenaltyAmount)
+    </div>
+
+    <div class="display-label">SubmissionTimeout</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmissionTimeout)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

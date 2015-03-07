@@ -1,0 +1,11 @@
+﻿@model CC.Web.Models.Solution.UploadSolutionViewModel
+           
+@using (Html.BeginForm("SubmitSolution", "Solution", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Hidden("teamId",Model.TeamId)
+    @Html.Hidden("problemId",Model.ProblemId)
+    <div>
+        Upload solution:<input type="file" name="Solution" />
+        <input type="submit" value="Upload" />
+    </div>
+}

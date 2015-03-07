@@ -1,0 +1,24 @@
+﻿@model CC.Web.Models.Team.TeamViewModel 
+
+<div>
+    <table>
+        <h3>@Model.Name</h3>
+        <tr>
+            <td>Registered for: @Html.ActionLink(Model.CompetitionName, "Details", new {controller = "Competition", id = Model.CompetitionId})</td>
+            @if (Model.Competition.Setting.StartTime > DateTime.Now)
+            {
+                if (!Model.IsOnTeam)
+                 {
+                     <td>@Html.Action("JoinButton")</td>
+                 }
+                 else
+                 {
+                     <td>@Html.Action("LeaveButton")</td>
+                 }
+            }
+        </tr>
+        <tr>
+            <td>@Html.Action("TeamsPeople", new { id = Model.Id })</td>
+        </tr>
+    </table>
+</div>

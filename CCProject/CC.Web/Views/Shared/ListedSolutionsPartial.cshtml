@@ -1,0 +1,17 @@
+﻿@model CC.Web.Models.Solution.SolutionsViewModel
+
+<div>
+    <ol>
+        @foreach(var solution in Model.SolutionViewModels)
+        {
+            <li>
+                <table>
+                    <tr>
+                        <td> @Html.ActionLink(solution.Score+"", "Details", new { controller = "Solution", id = solution.Id})</td>
+                        <td>@Html.DisplayForModel("DisplayTemplates/DateTime", solution.SubmissionTime)</td>
+                    </tr>
+                </table>
+            </li>
+        }
+    </ol>
+</div>

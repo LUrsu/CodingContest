@@ -1,0 +1,33 @@
+﻿@model CC.Web.Models.Competition.CompetitionViewModel
+<div>
+    <table>
+        <tr>
+            @if (!Model.IsOnGoing)
+            {
+                <td rowspan="1">@Html.Action("RegisteredTeams", new { id = Model.Id })
+                </td>
+            }
+            <td>@Html.DisplayForModel("DisplayTemplates/CompetitionViewModel", Model)
+            </td>
+        </tr>
+    </table>
+</div>
+    <ul>
+        @foreach (var problem in Model.Problems.ProblemViewModels)
+        {
+            <li>
+                @if (Membership.GetUser().UserName.Equals(Model.AdminUserName))
+                {
+                    @Html.ActionLink(problem.Name, "Edit", new { Id = problem.Id })
+                }
+                else
+                {
+                    @Html.ActionLink(problem.Name, "Details", new { Id = problem.Id })
+                }
+            </li>
+        }
+    </ul>
+
+        @Html.ActionLink("Edit", "Edit", Model)
+    
+@Html.Action("ScoreBoardPartial", new { id = Model.Id })

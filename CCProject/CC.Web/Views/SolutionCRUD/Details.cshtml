@@ -1,0 +1,65 @@
+﻿@model CC.Domain.Entities.Solution
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Solution</legend>
+
+    <div class="display-label">FileName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FileName)
+    </div>
+
+    <div class="display-label">SubmissionTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmissionTime)
+    </div>
+
+    <div class="display-label">JudgeTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JudgeTime)
+    </div>
+
+    <div class="display-label">Result</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Result)
+    </div>
+
+    <div class="display-label">ResultDescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResultDescription)
+    </div>
+
+    <div class="display-label">SourceCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SourceCode)
+    </div>
+
+    <div class="display-label">GeneratedInput</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GeneratedInput)
+    </div>
+
+    <div class="display-label">TeamInCompetitionId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeamInCompetitionId)
+    </div>
+
+    <div class="display-label">Problem</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Problem.Name)
+    </div>
+
+    <div class="display-label">Team</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Team.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

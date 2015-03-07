@@ -1,0 +1,10 @@
+﻿@model CC.Web.Models.Person.PeopleViewModel
+
+<div>
+    <ol>
+        @foreach(var person in Model.PersonViewModels)
+        {
+            <li>@Html.ActionLink(person.FullName, "Details", new { controller = "Person", id = person.Id })</li>
+        }
+    </ol>
+</div>

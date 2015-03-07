@@ -1,0 +1,9 @@
+﻿@model CC.Web.Models.Solution.SolutionFormViewModel 
+
+<div>
+    @using(Html.BeginForm("SubmitSolution", "Home", FormMethod.Post))
+    {
+        <!--TODO fix this stupid not finding EditorTemplates partial views-->
+        @Html.EditorForModel("", Model)
+    }
+</div>

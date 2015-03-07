@@ -1,0 +1,10 @@
+﻿@model CC.Web.Models.Team.TeamViewModel
+           
+<div>
+    @using(Html.BeginForm("Edit", "Team", FormMethod.Post))
+    {
+        @Html.EditorFor(m => m.Name)
+        <input type="submit" value="save"/>
+    }
+</div>
+

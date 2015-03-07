@@ -1,0 +1,24 @@
+﻿@model CC.Web.Models.Competition.CompetitionsViewModel
+<div>
+    <ol>
+        @foreach (var competition in Model.CompetitionViewModels)
+        {
+            <li>
+                <table>
+                    <tr>
+                        <td>@Html.ActionLink(competition.Competition.Name, "Details", new { controller = "Competition", id = competition.Competition.Id })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Start: @Html.DisplayForModel("DisplayTemplates/DateTime", competition.Competition.Setting.StartTime)
+                        </td>
+                        <td>
+                            End: @Html.DisplayForModel("DisplayTemplates/DateTime", competition.Competition.Setting.EndTime)
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        }
+    </ol>
+</div>

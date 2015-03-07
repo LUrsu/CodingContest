@@ -1,0 +1,60 @@
+﻿@model CC.Web.Models.Problem.DisplaySolutionsViewModel
+@if (Model.Solutions.Any())
+{
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    ID
+                </td>
+                <td>
+                    File Name
+                </td>
+                <td>
+                    Submitted At
+                </td>
+                <td>
+                    Judged At
+                </td>
+                <td>
+                    Result
+                </td>
+                <td>
+                    Score
+                </td>
+                <td>
+                    Code
+                </td>
+            </tr>
+            
+            @foreach (var s in Model.Solutions)
+            {
+                <tr>
+                    <td>
+                        @s.Id
+                    </td>
+                    <td>
+                        @s.SourceFile.Name
+                    </td>
+                    <td>
+                        @s.SubmissionTime
+                    </td>
+                    <td>
+                        @s.JudgeTime
+                    </td>
+                    <td>
+                        @s.Result<br />
+                        @s.ResultDescription
+                    </td>
+                    <td>
+                        @s.Score
+                    </td>
+                    <td>
+                        <span style="white-space: pre-line">@s.SourceFile.Data</span>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+}

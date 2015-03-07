@@ -1,0 +1,13 @@
+﻿@model CC.Web.Models.SolutionsForProblem.SolutionsForProblemViewModel
+
+<div>
+    <table>
+        <tr>
+            <td>@Html.ActionLink(Model.ShortName, "Details", new {controller = "Problem", id = Model.ProblemId})</td>
+            <td>@Html.ActionLink(Model.TopSolution.Score+"", "Details", new {controller = "Solution", id = Model.TopSolution.Id})</td>
+            <td>@Html.DisplayForModel("DisplayTemplates/DateTime", Model.TopSolution.SubmissionTime)</td>
+        <!-- add some thing like the following to the table data to allow for a drop down of all the solutions
+        onmouseover="Html.Action("ListedSolutionsPartial", "TeamInCompetition", new {id = Model.Id})"-->
+        </tr>
+    </table>
+</div>

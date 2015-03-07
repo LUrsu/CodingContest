@@ -1,0 +1,15 @@
+﻿@model CC.Web.Models.Team.TeamViewModel
+@Html.ValidationSummary()
+<div>
+    @using (Html.BeginForm("Create", "Team", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.CompetitionId)
+        <label>
+            Name</label><br />
+        @Html.EditorFor(m => m.Name)<br />
+        <label>
+            Password (optional)</label><br />
+        @Html.PasswordFor(m => m.Password)<br />
+        <input type="submit" value="save" />
+    }
+</div>

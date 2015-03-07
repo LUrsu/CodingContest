@@ -1,0 +1,8 @@
+﻿@model CC.Web.Models.Competition.CompetitionViewModel
+
+<div>
+    <h3>
+        @Html.ActionLink(Model.Competition.Name, "Details", new {controller = "Competition", id = Model.Competition.Id})
+    </h3>
+    @Html.Action("ScoreBoardPartial", "Competition")
+</div>

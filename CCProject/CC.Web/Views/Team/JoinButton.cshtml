@@ -1,0 +1,15 @@
+﻿@model CC.Web.Models.Team.AddPersonViewModel
+<div>
+    @using (Html.BeginForm("AddPerson", "Team", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.TeamId, Model.TeamId)
+        @Html.HiddenFor(m => m.UserName, Model.UserName)
+        if (!string.IsNullOrEmpty(Model.Password))
+        {
+            <label>Password</label>
+            <br/>
+            @Html.PasswordFor(m => m.Password)<br/>
+        }
+        <input type="submit" value="Join" />
+    }
+</div>

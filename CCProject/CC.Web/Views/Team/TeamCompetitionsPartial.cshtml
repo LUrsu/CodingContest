@@ -1,0 +1,22 @@
+﻿@model CC.Web.Models.Competition.TeamCompetitionViewModel
+
+<div>
+    <table>
+        <tr>
+            <th>Up Coming Competitions</th>
+            <th>On Going Competitions</th>
+            <th>Compleated Competitions</th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayForModel("DisplayTemplates/CompetitionsViewModel", Model.UpComing)
+            </td>
+            <td>
+                @Html.DisplayForModel("DisplayTemplates/CompetitionsViewModel", Model.OnGoing)
+            </td>
+            <td>
+                @Html.DisplayForModel("DisplayTemplates/CompetitionsViewModel", Model.Compleated)
+            </td>
+        </tr>
+    </table>
+</div>

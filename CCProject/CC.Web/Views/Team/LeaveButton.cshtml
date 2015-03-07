@@ -1,0 +1,9 @@
+﻿@model CC.Web.Models.Team.AddPersonViewModel
+<div>
+    @using (Html.BeginForm("RemovePerson", "Team", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.TeamId, Model.TeamId)
+        @Html.HiddenFor(m => m.UserName, Model.UserName)
+        <input type="submit" value="Leave" />
+    }
+</div>

@@ -1,0 +1,24 @@
+﻿@model CC.Web.Models.Problem.ProblemsViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<fieldset>
+    <legend>All Problems</legend>
+                <ul>
+            @foreach (var problem in Model.ProblemViewModels)
+            {
+                <li>   
+                    @Html.ActionLink(problem.Name, "Details", new { id = problem.Id })
+                </li>
+            }
+            </ul>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

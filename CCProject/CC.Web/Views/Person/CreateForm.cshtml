@@ -1,0 +1,19 @@
+﻿@model CC.Web.Models.Person.PersonFormViewModel
+           
+@Html.ValidationSummary()
+
+<div>
+    @using(Html.BeginForm("Create", "Person", FormMethod.Post))
+    {
+        <fieldset>
+            <label>First Name</label><br/>
+            @Html.TextBoxFor(m => m.FirstName)<br/>
+            <label>Last Name</label><br/>
+            @Html.TextBoxFor(m => m.LastName)<br/>
+            <label>Email</label><br/>
+            @Html.TextBoxFor(m => m.Email)<br/>
+            @Html.HiddenFor(m => m.UserName, Model.UserName)
+            <input type="submit" value="Save"/>
+        </fieldset>
+    }
+</div>

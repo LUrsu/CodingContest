@@ -1,0 +1,175 @@
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #bcbcbc;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    background-color: #e9e6e6;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+.login 
+{
+    float: right;
+}
+
+/*
+.header, #header
+{
+    background-color: #CCFFDD; 
+    border-bottom: 2px solid #111; 
+    color: White;
+}
+*/
+
+.footer
+{
+    background-color: #000000;  
+    color: White;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* layout components
+-----------------------------------------------------------*/
+
+nav {
+    background-color: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.page {
+    width: 95%;
+    color: #102206;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header, #header {
+    position: relative;
+    margin-bottom: 0px;
+    padding: 0;
+    height: 100px;
+}
+
+.header, #header{
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    background-color: #ea9919;
+    border: none;
+    line-height: 1.8em;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px #111;
+}
+
+#main {
+    padding: 30px 30px 15px 30px;
+    border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;
+}
+
+/* Menu bar
+----------------------------------------------------------*/
+ul#menu {
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    text-align: right;
+    float: left;
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a {
+    padding: 8px 25px;
+    font-weight: bold;
+    font-size: 20;
+    text-decoration: none;
+    line-height: 2.1em;
+    background-color: #000000;
+    color: #fbff00;
+    elevation: lower;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
